@@ -14,6 +14,7 @@ ENV ARCHISO_OUTPUT_DIRECTORY="/tmp/build_output"
 
 WORKDIR /archiso
 
+COPY default_build_vars /root/default_build_vars
 COPY clone-and-build.sh /root/clone-and-build.sh
 
 CMD ["/bin/sh", "/root/clone-and-build.sh"]

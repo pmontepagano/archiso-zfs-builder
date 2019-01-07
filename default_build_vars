@@ -1,0 +1,5 @@
+export ARCHISO_NAME="archlinux"
+export ARCHISO_VERSION=$(date +%Y.%m.%d)
+export ARCHISO_LABEL="ARCH_$(date +%Y%m)"
+export ARCHISO_PUBLISHER="Arch Linux <http://www.archlinux.org>"
+export ARCHISO_APPLICATION_NAME="Arch Linux Live/Rescue CD"
