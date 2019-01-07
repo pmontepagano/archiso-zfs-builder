@@ -19,4 +19,6 @@ ENV ARCHISO_OUTPUT_DIRECTORY="/tmp/build_output"
 
 WORKDIR /archiso
 
-CMD ["/bin/sh", "-c", "/bin/bash ./build.sh -N \"${ARCHISO_NAME}\" -V \"${ARCHISO_VERSION}\" -L \"${ARCHISO_LABEL}\" -P \"${ARCHISO_PUBLISHER}\" -A \"${ARCHISO_APPLICATION_NAME}\" -o \"${ARCHISO_OUTPUT_DIRECTORY}\""]
+COPY clone-and-build.sh /root/clone-and-build.sh
+
+CMD ["/bin/sh", "/root/clone-and-build.sh"]
