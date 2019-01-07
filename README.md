@@ -37,5 +37,6 @@ Build variables should be provided through a file called `build_vars` in the ima
 The following environmental variables define the behaviour of the build command.
 
 | Key | Default Value | Comment |
+| --- | ------------- | ------- |
 | ARCHISO_SOURCE_REPOSITORY | <undefined> | Defining this variable will make the image clone a git repository as the source for the build. If the `source` directory is mounted or exists as a non-git directory with this defined the build will fail.
 | ARCHISO_OUTPUT_DIRECTORY | /tmp/build_output |
