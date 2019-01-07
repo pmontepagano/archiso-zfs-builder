@@ -19,6 +19,7 @@ With the following command you can build an archiso project called *rescue* in t
 ## Environment Variables
 | Key | Default Value |
 | --- | ------------- |
+| ARCHISO_SOURCE_REPOSITORY | <undefined> |
 | ARCHISO_NAME | archlinux |
 | ARCHISO_VERSION | latest |
 | ARCHISO_LABEL | ARCH |
