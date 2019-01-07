@@ -1,5 +1,15 @@
 #!/bin/sh
 if [ -n "${ARCHISO_SOURCE_REPOSITORY}" ]; then
+  if [ -d "./source" ]; then
+    if [ -d .git ]; then
+      cd source
+      git reset --hard origin/master
+      git pull
+    else
+      echo "Source directory already exists and isn't a git repository when ARCHISO_SOURCE_REPOSITORY is defined. Read README for more details on this issue. Exiting..."
+      exit 1
+    fi
+  fi
   git clone ${ARCHISO_SOURCE_REPOSITORY} source
   echo ""
 elif [ ! -d "./source" ]; then
